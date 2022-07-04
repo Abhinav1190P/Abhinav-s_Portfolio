@@ -5,7 +5,7 @@ export const Projects = () => {
 	const projects = [
 		{
 			projectName:'Ecommerce Website',
-			projectLink:'https://ecommerce-frontend-pi.vercel.app/',
+			projectLink:'https://ecommerce1234.vercel.app/',
 			repoLinL:'/Abhinav1190P/Ecommerce_Server'
 		},
 		{
