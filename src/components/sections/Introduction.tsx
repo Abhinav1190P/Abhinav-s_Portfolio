@@ -10,9 +10,9 @@ export const Introduction = () => {
 						
 							<div className="content" style={{ textAlign: "center" }}>
 								<h1 className="title">
-									Hello, I'm <span className="blue-text">Jan Leigh</span>.
+									Hello, I'm <span className="blue-text">Abhinav Pandey</span>.
 								</h1>
-								<p className="description">A Filipino full-stack web developer.</p>
+								<p className="description">An Indian full-stack web developer.</p>
 								<Link to="about" smooth={true} className="button floating">
 									View More
 									<span>→</span>

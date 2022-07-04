@@ -42,46 +42,28 @@ const getLanguageIcon = (language: string): string => {
 	return `devicon-${language.toLowerCase()}-plain`;
 };
 
-export const ProjectCard = ({ username, repository }: { username: string; repository: string }) => {
-	const [data, _hasError, loading] = getRepository(username, repository);
-
-	if (!data.name) data.name = "I'm a placeholder!";
-	if (!data.description) data.description = "You are seeing this cause you are rate limited.";
-	if (!data.html_url) data.html_url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-	if (!data.language) data.language = "GitHub";
-	if (!data.stargazers_count) data.stargazers_count = 69;
-
-	if (loading)
-		return (
-			<div className="card">
-				<div className="card-content">
-					<div className="repo-description">
-						<p>Loading...</p>
-					</div>
-				</div>
-			</div>
-		);
-
-	const icon = getLanguageIcon(data.language);
+export const ProjectCard = ({data}) => {
+	
 
 	return (
 		<div className="card">
 			<div className="card-content">
 				<div className="repo-title">
-					<a href={data.html_url} target="_blank">
-						<RepoIcon size={16} /> {data.name}
+					<a 
+					style={{color:'white'}} href="#" target="_blank">
+						{data.projectName}
 					</a>
 				</div>
 				<div className="repo-description">
-					<p>{data.description}</p>
+					<p>{data.repoLinL}</p>
 					<br />
 					<div style={{ display: "flex" }}>
 						<div style={{ marginRight: "3rem" }}>
-							<i className={icon}></i> {data.language}
+						<a href={data.projectLink} target="_blank">
+						Visit
+					</a>
 						</div>
-						<div>
-							<StarFillIcon size={16} /> {data.stargazers_count} Stars
-						</div>
+						
 						{/* <div style={{ marginRight: "12px" }}>
                            <QuestionIcon size={16} /> {data.archived ? "Archived" : "Maintained"}
                         </div> */}

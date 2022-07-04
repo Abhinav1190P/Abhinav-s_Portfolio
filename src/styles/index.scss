@@ -6,7 +6,11 @@
 #root {
 	#introduction {
 		flex-direction: unset;
-
+		background-image: url("./iceland.jpg");
+		background-position: center;
+		background-size: cover;
+		opacity: .8;
+		background-repeat: no-repeat;
 		.introduction-container {
 			.content {
 				margin: 3rem auto 2rem auto;
@@ -51,6 +55,7 @@
 			}
 
 			.columns {
+				
 				padding: 12px 0px 12px 0px;
 				h6 {
 					color: var(--accent);

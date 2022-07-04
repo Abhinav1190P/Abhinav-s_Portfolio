@@ -1,20 +1,43 @@
 import ProjectCard from "../ProjectCard";
 
 export const Projects = () => {
+
+	const projects = [
+		{
+			projectName:'Ecommerce Website',
+			projectLink:'https://ecommerce-frontend-pi.vercel.app/',
+			repoLinL:'/Abhinav1190P/Ecommerce_Server'
+		},
+		{
+			projectName:'Movies Hub',
+			projectLink:'https://xenodochial-mcclintock-0bbd24.netlify.app/',
+			repoLinL:'/Abhinav1190P/moviesApp'
+		}
+	]
+
 	return (
 		<section id="projects" className="projects section is-medium">
 			<div className="projects-container">
 				<h1>Projects</h1>
 				<div className="columns">
-					<div className="column is-multiline is-6">
-						<ProjectCard username="janleigh" repository="portfolio" />
-						<ProjectCard username="janleigh" repository="rieko" />
+					<div
+					style={{width:'100%'}}
+					className="column is-multiline is-6">
+						{
+							projects?.map((item,i)=>{
+								return (
+									<ProjectCard 
+									key={i}
+									data={item}/>
+								)
+							})
+						}
+						
 					</div>
-					<div className="column is-multiline is-6">
-						<ProjectCard username="janleigh" repository="trace.moe.ts" />
-					</div>
+					
 				</div>
-				<h1>Commissions</h1>
+				<h1>
+That's about it</h1>
 				<div className="colums">
 					<div className="column is-full">
 						<p
@@ -23,10 +46,12 @@ export const Projects = () => {
 								fontSize: "1.2rem"
 							}}
 						>
-							Hm. Well, this is awkward. There seems nothing in here.
+							Well, this is awkward. Nevermind, i'll insert a quote here.
+							<br/>
+							<i>"Stay hungry, stay foolish"</i>
 							<br />
-							You can always commission me by clicking{" "}
-							<a href="http://ko-fi.com/janleigh/commissions">here</a>.
+							{" "}
+							<a href="#">Steve jobs</a>.
 						</p>
 					</div>
 				</div>
